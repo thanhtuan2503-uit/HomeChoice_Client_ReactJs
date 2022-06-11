@@ -3,15 +3,15 @@ import React, { useCallback, useState, useEffect, useRef } from 'react'
 import Helmet from '../components/Helmet'
 import CheckBox from '../components/CheckBox'
 
-import productData from '../assets/fake-data/products'
-import category from '../assets/fake-data/category'
+import productData from '../assets/data/products'
+import category from '../assets/data/category'
 import Button from '../components/Button'
 import InfinityList from '../components/InfinityList'
 
 const Catalog = () => {
 
     const initFilter = {
-        category: []
+        category: [],
     }
 
     const productList = productData.getAllProducts()
@@ -48,6 +48,7 @@ const Catalog = () => {
             if (filter.category.length > 0) {
                 temp = temp.filter(e => filter.category.includes(e.categorySlug))
             }
+
             setProducts(temp)
         },
         [filter, productList],
@@ -70,7 +71,7 @@ const Catalog = () => {
                     </div>
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__title">
-                            danh mục sản phẩm
+                            Danh mục sản phẩm
                         </div>
                         <div className="catalog__filter__widget__content">
                             {
@@ -86,14 +87,17 @@ const Catalog = () => {
                             }
                         </div>
                     </div>
+
+                    
+
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__content">
-                            <Button size="sm" onClick={clearFilter}>xóa bộ lọc</Button>
+                            <Button size="sm" onClick={clearFilter}>Xóa bộ lọc</Button>
                         </div>
                     </div>
                 </div>
                 <div className="catalog__filter__toggle">
-                    <Button size="sm" onClick={() => showHideFilter()}>bộ lọc</Button>
+                    <Button size="sm" onClick={() => showHideFilter()}>Bộ lọc</Button>
                 </div>
                 <div className="catalog__content">
                     <InfinityList

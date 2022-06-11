@@ -8,9 +8,9 @@ import PolicyCard from '../components/PolicyCard'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
 
-import heroSliderData from '../assets/fake-data/hero-slider'
-import policy from '../assets/fake-data/policy'
-import productData from '../assets/fake-data/products'
+import heroSliderData from '../assets/data/hero-slider'
+import policy from '../assets/data/policy'
+import productData from '../assets/data/products'
 
 import banner from '../assets/images/banner.jpg'
 
@@ -52,7 +52,7 @@ const Home = () => {
             {/* best selling section */}
             <Section>
                 <SectionTitle>
-                    top sản phẩm bán chạy trong tuần
+                    Top sản phẩm bán chạy trong tuần
                 </SectionTitle>
                 <SectionBody>
                     <Grid
@@ -69,6 +69,7 @@ const Home = () => {
                                     img02={item.image02}
                                     name={item.title}
                                     price={Number(item.price)}
+                                    price1={Number(item.price1)}
                                     slug={item.slug}
                                 />
                             ))
@@ -79,9 +80,9 @@ const Home = () => {
             {/* end best selling section */}
 
             {/* new arrival section */}
-            <Section>
+            <Section >
                 <SectionTitle>
-                    sản phẩm mới
+                    Sản phẩm mới
                 </SectionTitle>
                 <SectionBody>
                     <Grid
@@ -98,6 +99,7 @@ const Home = () => {
                                     img02={item.image02}
                                     name={item.title}
                                     price={Number(item.price)}
+                                    price1={Number(item.price1)}
                                     slug={item.slug}
                                 />
                             ))
@@ -118,9 +120,10 @@ const Home = () => {
             {/* end banner */}
 
             {/* popular product section */}
-            <Section>
-                <SectionTitle>
-                    phổ biến
+            <div >
+            <Section >
+                <SectionTitle >
+                    Phổ biến
                 </SectionTitle>
                 <SectionBody>
                     <Grid
@@ -137,6 +140,7 @@ const Home = () => {
                                     img02={item.image02}
                                     name={item.title}
                                     price={Number(item.price)}
+                                    price1={Number(item.price1)}
                                     slug={item.slug}
                                 />
                             ))
@@ -145,6 +149,8 @@ const Home = () => {
                 </SectionBody>
             </Section>
             {/* end popular product section */}
+            </div>
+            
         </Helmet>
     )
 }

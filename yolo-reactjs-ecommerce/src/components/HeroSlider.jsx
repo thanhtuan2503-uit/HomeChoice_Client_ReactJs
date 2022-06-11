@@ -87,13 +87,13 @@ const HeroSliderItem = props => (
                         icon="bx bx-cart"
                         animate={true}
                     >
-                        xem chi tiết
+                        Xem chi tiết
                     </Button>
                 </Link>
             </div>
         </div>
         <div className="hero-slider__item__image">
-            <div className={`shape bg-${props.item.color}`}></div>
+            <div></div>
             <img src={props.item.img} alt="" />
         </div>
     </div>

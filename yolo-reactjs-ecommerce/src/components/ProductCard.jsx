@@ -26,7 +26,7 @@ const ProductCard = props => {
                 <div className="product-card__price">
                     {numberWithCommas(props.price)}
                     <span className="product-card__price__old">
-                        <del>{numberWithCommas(399000)}</del>
+                        <del>{numberWithCommas(props.price1)}</del>
                     </span>
                 </div>
             </Link>
@@ -37,7 +37,7 @@ const ProductCard = props => {
                     animate={true}
                     onClick={() => dispatch(set(props.slug))}
                 >
-                    chọn mua
+                    Chọn mua
                 </Button>
             </div>
         </div>
@@ -49,6 +49,7 @@ ProductCard.propTypes = {
     img02: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
+    price1: PropTypes.number.isRequired,
     slug: PropTypes.string.isRequired,
 }
 

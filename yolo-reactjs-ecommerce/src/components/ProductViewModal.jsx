@@ -8,7 +8,7 @@ import Button from './Button'
 
 import { remove } from '../redux/product-modal/productModalSlice'
 
-import productData from '../assets/fake-data/products'
+import productData from '../assets/data/products'
 
 const ProductViewModal = () => {
 
@@ -30,7 +30,7 @@ const ProductViewModal = () => {
                         size="sm"    
                         onClick={() => dispatch(remove())}
                     >
-                        đóng
+                        Đóng
                     </Button>
                 </div>
             </div>

@@ -1,0 +1,15 @@
+.contact-info {
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+    text-transform: uppercase;
+    &--main {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.8rem;
+  }
+}

@@ -6,13 +6,13 @@ import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
 import ProductView from '../components/ProductView'
 
-import productData from '../assets/fake-data/products'
+import productData from '../assets/data/products'
 
 const Product = props => {
 
     const product = productData.getProductBySlug(props.match.params.slug)
 
-    const relatedProducts = productData.getProducts(12)
+    const relatedProducts = productData.getProducts(8)
 
     React.useEffect(() => {
         window.scrollTo(0,0)
@@ -44,6 +44,7 @@ const Product = props => {
                                     img02={item.image02}
                                     name={item.title}
                                     price={Number(item.price)}
+                                    price1={Number(item.price1)}
                                     slug={item.slug}
                                 />   
                             ))

@@ -9,11 +9,11 @@ import logo from '../assets/images/lo-go.jpg'
 const footerAboutLinks = [
     {
         display: "Giới thiệu",
-        path: "/about"
+        path: "/introduction"
     },
     {
         display: "Liên hệ",
-        path: "/about"
+        path: "/contact"
     },
     {
         display: "Tuyển dụng",
@@ -21,11 +21,11 @@ const footerAboutLinks = [
     },
     {
         display: "Tin tức",
-        path: "/about"
+        path: "/new"
     },
     {
         display: "Hệ thống cửa hàng",
-        path: "/about"
+        path: "/store"
     }
 ]
 
@@ -71,7 +71,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer__title">
-                            HOME CHOICE
+                            Home Choice
                         </div>
                         <div className="footer__content">
                             {

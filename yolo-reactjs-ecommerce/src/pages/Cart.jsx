@@ -7,7 +7,7 @@ import Helmet from '../components/Helmet'
 import CartItem from '../components/CartItem'
 import Button from '../components/Button'
 
-import productData from '../assets/fake-data/products'
+import productData from '../assets/data/products'
 import numberWithCommas from '../utils/numberWithCommas'
 
 const Cart = () => {
@@ -19,7 +19,12 @@ const Cart = () => {
     const [totalProducts, setTotalProducts] = useState(0)
 
     const [totalPrice, setTotalPrice] = useState(0)
+    const addToCart = () => {
 
+            alert('Đặt hàng thành công!')
+
+        }
+    
     useEffect(() => {
         setCartProducts(productData.getCartItemsInfo(cartItems))
         setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
@@ -39,9 +44,12 @@ const Cart = () => {
                         </div>
                     </div>
                     <div className="cart__info__btn">
-                        <Button size="block">
-                            Đặt hàng
-                        </Button>
+                        <div>
+                                <Button  size="block" onclick={()=>addToCart()}>
+                                    Đặt hàng
+                                </Button>
+                        </div>
+
                         <Link to="/catalog">
                             <Button size="block">
                                 Tiếp tục mua hàng

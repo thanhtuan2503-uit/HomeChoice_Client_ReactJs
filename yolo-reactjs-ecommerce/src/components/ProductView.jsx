@@ -54,20 +54,6 @@ const ProductView = props => {
         setSize(undefined)
     }, [product])
 
-    const check = () => {
-        if (color === undefined) {
-            alert('Vui lòng chọn màu sắc!')
-            return false
-        }
-
-        if (size === undefined) {
-            alert('Vui lòng chọn kích cỡ!')
-            return false
-        }
-
-        return true
-    }
-
     const addToCart = () => {
         
             let newItem = {
@@ -78,7 +64,7 @@ const ProductView = props => {
                 quantity: quantity
             }
             if (dispatch(addItem(newItem))) {
-                alert('Success')
+                alert('Sản phẩm đã được thêm vào giỏ hàng')
             } else {
                 alert('Fail')
             }
@@ -110,9 +96,9 @@ const ProductView = props => {
                     <div className="product__images__list__item" onClick={() => setPreviewImg(product.image01)}>
                         <img src={product.image01} alt="" />
                     </div>
-                    {/* <div className="product__images__list__item" onClick={() => setPreviewImg(product.image02)}>
+                    <div className="product__images__list__item" onClick={() => setPreviewImg(product.image02)}>
                         <img src={product.image02} alt="" />
-                    </div> */}
+                    </div>
                 </div>
                 <div className="product__images__main">
                     <img src={previewImg} alt="" />
@@ -138,36 +124,7 @@ const ProductView = props => {
                         {numberWithCommas(product.price)}
                     </span>
                 </div>
-                {/* <div className="product__info__item">
-                    <div className="product__info__item__title">
-                        Màu sắc
-                    </div>
-                    <div className="product__info__item__list">
-                        {
-                            product.colors.map((item, index) => (
-                                <div key={index} className={`product__info__item__list__item ${color === item ? 'active' : ''}`} onClick={() => setColor(item)}>
-                                    <div className={`circle bg-${item}`}></div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div> */}
-                {/* <div className="product__info__item">
-                    <div className="product__info__item__title">
-                        Kích cỡ
-                    </div>
-                    <div className="product__info__item__list">
-                        {
-                            product.size.map((item, index) => (
-                                <div key={index} className={`product__info__item__list__item ${size === item ? 'active' : ''}`} onClick={() => setSize(item)}>
-                                    <span className="product__info__item__list__item__size">
-                                        {item}
-                                    </span>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div> */}
+               
                 <div className="product__info__item">
                     <div className="product__info__item__title">
                         Số lượng
@@ -185,8 +142,8 @@ const ProductView = props => {
                     </div>
                 </div>
                 <div className="product__info__item">
-                    <Button onClick={() => addToCart()}>thêm vào giỏ</Button>
-                    <Button onClick={() => goToCart()}>mua ngay</Button>
+                    <Button onClick={() => addToCart()}>Thêm vào giỏ</Button>
+                    <Button onClick={() => goToCart()}>Mua ngay</Button>
                 </div>
             </div>
             <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>

@@ -14,7 +14,7 @@ const mainNav = [
     },
     {
         display: "Khuyến mãi",
-        path: "/accessories"
+        path: "/discount"
     },
     {
         display: "Liên hệ",

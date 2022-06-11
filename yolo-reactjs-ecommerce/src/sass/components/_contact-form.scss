@@ -1,0 +1,45 @@
+.contact-form {
+  margin-top: 1rem;
+  background: #fdf6f4;
+  padding: 1rem;
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input-field {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.8rem 0.5rem;
+    border: 1px solid #eee;
+    border-radius: 0.2rem;
+    outline: none;
+    &:nth-child(1) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__message {
+    margin-top: 0.3rem;
+    margin-bottom: 00.5rem;
+    width: 100%;
+    border: none;
+    
+  }
+  &__button {
+    width: 100%;
+    border: none;
+    padding: 0.8rem 0.5rem;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    background: #fe7e73;
+  }
+}
